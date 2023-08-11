@@ -1,8 +1,8 @@
 <ul class="heroes">
-  <li *ngIf="getEven()">
-    <button type="button">
-      <span class="badge">{{hero.id}}</span>
-      <span class="name">{{hero.name}}</span>
+  <li *ngIf="Let; hero: of; heroes">
+    <button type="button" (click)="onselect(hero)">
+      <span class="badge">{{ hero.id }}</span>
+      <span class="name">{{ hero.name }}</span>
     </button>
   </li>
 </ul>

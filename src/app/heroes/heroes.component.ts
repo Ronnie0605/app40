@@ -4,27 +4,18 @@ import { FormsModule } from '@angular/forms';
 import { Hero } from '../hero';
 import { HEROES } from '../mock-heroes';
 @Component({
-  standalone:true,
+  standalone: true,
   selector: 'app-heroes',
   templateUrl: './heroes.component.html',
   styleUrls: ['./heroes.component.css'],
-  imports:[CommonModule,FormsModule]
- 
-
+  imports: [CommonModule, FormsModule],
 })
 export class HeroesComponent implements OnInit {
+  heroes = HEROES;
 
-  @Input() hero!: Hero;
-  
+  constructor() {}
 
-  constructor() {
-   }
+  onSelect(hero: Hero) {}
 
-   getEven(){
-     return this.hero.id % 2 !=0;
-   }
-
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

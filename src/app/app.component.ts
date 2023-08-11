@@ -13,8 +13,6 @@ import { HEROES } from './mock-heroes';
 export class AppComponent implements OnInit {
   title = 'Tour of Heroes';
 
-  heroes = HEROES;
-
   constructor() { }
 
   ngOnInit() {
